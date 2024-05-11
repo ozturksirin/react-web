@@ -1,0 +1,19 @@
+.button {
+  background-color: #4caf50 !important;
+  border: none !important;
+  /* padding: 15px 32px !important; */
+  font-size: 16px !important;
+  border-radius: 120px !important;
+  min-width: 200px;
+}
+
+.have-variant {
+  border: none !important;
+  /* padding: 15px 32px !important; */
+  font-size: 16px !important;
+  border-radius: 120px !important;
+}
+
+.button:hover {
+  background-color: #39883d !important;
+}
