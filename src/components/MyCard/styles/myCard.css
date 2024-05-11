@@ -1,0 +1,27 @@
+.card-body {
+  padding: 1.25rem;
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.border-primary {
+  border: none !important;
+}
+
+.data-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.card {
+  border: none !important;
+}
+
+.last-month {
+  color: var(--main-color);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: (var(--font-family));
+}

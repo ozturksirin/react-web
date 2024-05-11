@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./styles/login.css";
 import { Col, Form, Image, Row } from "react-bootstrap";
 import { MyButton, MyInput } from "../../components/index";
@@ -42,10 +42,8 @@ const Login = (props: LoginProps) => {
       setPasswordError("Invalid email or password");
       return;
     }
-
     console.log("Login Successful");
-    // Burada kullanıcıyı başka bir sayfaya yönlendirebilirsiniz.
-    // Örneğin: navigate("/Home");
+    navigate("/Home");
   };
   return (
     <div className="body">
