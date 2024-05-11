@@ -1,15 +1,6 @@
 import React from "react";
 import "./styles/myInput.css";
-
-type InputProps = {
-  type?: React.HTMLInputTypeAttribute;
-  placeholder?: string;
-  disabled?: boolean;
-  name?: string;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  error?: string;
-};
+import { InputProps } from "./types";
 
 const MyInput = (props: InputProps) => {
   const {
