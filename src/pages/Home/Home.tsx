@@ -133,11 +133,19 @@ const Home = (props: HomeProps) => {
         <div className="header d-flex justify-content-between mt-2 mb-2">
           <div className="d-flex">
             <h1 className="dh-title">Card Analytics</h1>
-            <div>
+            <div className="d-flex">
               <MyButton
                 title="Validation Data"
                 onPress={() => {
                   navigate("/Validation");
+                }}
+                height={40}
+                buttonContainerStyle={{ marginLeft: "10px" }}
+              />
+              <MyButton
+                title="Assets Pool"
+                onPress={() => {
+                  navigate("/AssetsPool");
                 }}
                 height={40}
                 buttonContainerStyle={{ marginLeft: "10px" }}

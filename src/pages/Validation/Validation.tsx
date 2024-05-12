@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, Table } from "react-bootstrap";
+import { Alert, Container, Table } from "react-bootstrap";
 import { MyButton } from "../../components/index";
 import "./styles/validation.css";
 import Popup from "reactjs-popup";
@@ -99,7 +99,7 @@ const Validation = (props: Props) => {
     setShowAlert(true);
   };
   return (
-    <div>
+    <Container fluid>
       {showAlert && (
         <Alert
           variant="success"
@@ -191,7 +191,7 @@ const Validation = (props: Props) => {
           />
         </div>
       </Popup>
-    </div>
+    </Container>
   );
 };
 
