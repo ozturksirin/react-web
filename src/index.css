@@ -6,6 +6,7 @@
   --main-color: #445686;
   --secondary-color: #21d25f;
   --thrid-color: #3e78a0;
+  --font-family: "Roboto", sans-serif;
 }
 .root-body {
   font-family: "Roboto", sans-serif;

@@ -7,7 +7,7 @@ type Props = {};
 
 const Router = (props: Props) => {
   return (
-    <div className="body">
+    <div className="root-body">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/Home" element={<Home />} />

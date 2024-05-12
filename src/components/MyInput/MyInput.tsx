@@ -28,6 +28,7 @@ const MyInput = (props: InputProps) => {
             : undefined
         }
       />
+      {error && <span className="error">{error}</span>}
     </React.Fragment>
   );
 };

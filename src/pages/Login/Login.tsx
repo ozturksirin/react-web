@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./styles/login.css";
 import { Col, Form, Image, Row } from "react-bootstrap";
 import { MyButton, MyInput } from "../../components/index";
@@ -17,29 +17,34 @@ const Login = (props: LoginProps) => {
     password: "admin123",
   };
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [passwordError, setPasswordError] = useState<string>("");
 
   const handleOnSubmit = () => {
     const re =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
+    setEmailError(email === "" ? "Email is required" : "");
+    setPasswordError(password === "" ? "Password is required" : "");
+
     if (email === "" || password === "") {
-      return alert("Please enter email and password");
+      return;
     }
 
     if (!re.test(email)) {
-      return alert("Invalid email format");
+      setEmailError("Invalid email format");
+      return;
     }
 
     if (email !== dummyData.email || password !== dummyData.password) {
-      return alert("Invalid email or password");
+      setPasswordError("Invalid email or password");
+      return;
     }
-
     console.log("Login Successful");
     navigate("/Home");
   };
-
   return (
     <div className="body">
       <div className="inner-body d-flex justify-content-center align-items-center">
@@ -64,6 +69,7 @@ const Login = (props: LoginProps) => {
                   setEmail(e.target.value);
                 }}
                 value={email}
+                error={emailError === "" ? "" : emailError}
               />
 
               <MyInput
@@ -73,6 +79,7 @@ const Login = (props: LoginProps) => {
                   setPassword(e.target.value);
                 }}
                 value={password}
+                error={passwordError === "" ? "" : passwordError}
               />
             </Form>
             <MyButton

@@ -1,3 +1,4 @@
 import MyButton from "./MyButton/MyButton";
 import MyInput from "./MyInput/MyInput";
-export { MyButton, MyInput };
+import MyCard from "./MyCard/MyCard";
+export { MyButton, MyInput, MyCard };
