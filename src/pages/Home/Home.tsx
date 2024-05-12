@@ -11,8 +11,10 @@ import {
 import { AiFillDashboard } from "react-icons/ai";
 import { MyButton, MyCard } from "../../components/index";
 import { Table } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Home = (props: HomeProps) => {
+  const navigate = useNavigate();
   const dummyAssetsData = [
     {
       id: 1,
@@ -134,8 +136,11 @@ const Home = (props: HomeProps) => {
             <div>
               <MyButton
                 title="Validation Data"
-                onPress={() => {}}
+                onPress={() => {
+                  navigate("/Validation");
+                }}
                 height={40}
+                buttonContainerStyle={{ marginLeft: "10px" }}
               />
             </div>
           </div>
